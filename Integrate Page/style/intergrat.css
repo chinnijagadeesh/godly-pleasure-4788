@@ -1,0 +1,65 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "geomanist-book", sans-serif;
+    color: #333;
+}
+
+#container {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    padding: 30px 50px;
+    margin-top: 80px;
+}
+
+#container>h2 {
+    font-size: 22px;
+    font-weight: 550;
+}
+
+#container>p {
+    color: #a2aab1;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 15px 0;
+}
+
+#integrateData {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5);
+    gap: 20px;
+}
+
+.intImg {
+    margin: auto;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+        rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+/* .intImg > img {
+        width: 80%;
+      } */
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 50px;
+    background-color: transparent;
+    box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px,
+        rgb(27 31 35 / 15%) 0px 0px 0px 1px;
+    border: transparent;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}

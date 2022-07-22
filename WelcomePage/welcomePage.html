@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onboarding - Everhour</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: Lato, sans-serif;
+        color: #333;
+      }
+
+      #container {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 30%;
+        margin: auto;
+        text-align: center;
+        padding: 30px 50px;
+        margin-top: 80px;
+      }
+
+      #container > h2 {
+        font-size: 22px;
+        font-weight: 550;
+      }
+
+      #container > p {
+        color: #a2aab1;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        margin: 15px 0;
+      }
+      #form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: left;
+      }
+      #form > p {
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 25px;
+      }
+      #form > input {
+        padding: 15px 0;
+      }
+
+      #form > input::placeholder {
+        padding-left: 10px;
+        color: #a5b0bb;
+      }
+
+      button {
+        width: 100%;
+        padding: 15px;
+        margin-top: 25px;
+        background-color: transparent;
+        box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px,
+          rgb(27 31 35 / 15%) 0px 0px 0px 1px;
+        border: transparent;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 14px;
+        background: #57bb71;
+        color: white;
+      }
+      button:hover {
+        box-shadow: 0 0 30px 0 rgb(26 191 104 / 40%);
+        cursor: pointer;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      #navbar {
+        display: flex;
+        justify-content: space-between;
+        box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px,
+          rgb(27 31 35 / 15%) 0px 0px 0px 1px;
+        padding: 10px;
+      }
+      #navbar > div > img {
+        margin-left: 20px;
+        width: 30%;
+      }
+      #navbar > div:nth-child(2) {
+        margin-right: 20px;
+        border: 1px solid red;
+        border-radius: 50%;
+        padding: 20px;
+      }
+      #term {
+        display: flex;
+        gap: 3px;
+        margin-top: 25px;
+      }
+      #term > p {
+        font-size: 14px;
+      }
+      #term > p > a {
+        text-decoration: none;
+        color: #6b9ce7;
+      }
+      #term > p > a:hover {
+        color: #1567e1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <div>
+        <img src="https://app.everhour.com/assets/img/everhour_48.svg" alt="" />
+      </div>
+      <div></div>
+    </div>
+    <div id="main">
+      <div id="container">
+        <h2>Welcome to Everhour</h2>
+        <p>Add your info to make collaborating easy</p>
+        <form id="form">
+          <p>Full Name</p>
+          <input type="text" id="name" placeholder="e.g. Nrupul Dev" />
+          <p>Job Title</p>
+          <input type="text" id="title" placeholder="e.g. Co-Founder / CEO" />
+          <p>Phone</p>
+          <input type="number" id="phone" placeholder="e.g. 8670113037" />
+        </form>
+        <div id="term">
+          <input type="checkbox" id="checkbox" onchange="check();" />
+          <p>
+            I have read and agree to the
+            <a href="https://everhour.com/terms">Terms</a> and
+            <a href="https://everhour.com/policy">Privacy Policy</a>
+          </p>
+        </div>
+
+        <button onclick="storeData()" id="btn">Continue</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  function constructor(u, t, m) {
+    this.username = u;
+    this.jobtitel = t;
+    this.phoneNumber = m;
+  }
+
+  let btn = document.getElementById("btn");
+  let checkbox = document.getElementById("checkbox");
+  function check() {
+    if (checkbox.checked) {
+      btn.style.backgroundColor = "#24be6a";
+      btn.innerHTML = null;
+      let a = document.createElement("a");
+      a.innerText = "Continue";
+      a.setAttribute("href", "integrate.html");
+      btn.append(a);
+      let form = document.getElementById("form");
+      let dataLS = JSON.parse(localStorage.getItem("userdata")) || [];
+      let storeData = () => {
+        let dataObj = new constructor(
+          form.name.value,
+          form.title.value,
+          form.phone.value
+        );
+        dataLS.push(dataObj);
+        localStorage.setItem("userdata", JSON.stringify(dataObj));
+      };
+    } else {
+      btn.style.backgroundColor = "#57bb71";
+      btn.setAttribute("disabled");
+    }
+  }
+</script>
