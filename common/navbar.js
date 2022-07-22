@@ -24,13 +24,13 @@ let navbar = () => {
         </div>
         </div> 
 <p> <a href="customer.html">Customers</a></p>
-<p>Pricing</p>
-<p>Demo</p>
-<p>Clients</p>
-<p>Project Create</p>
+<p><a href="pricing.html">Pricing</a></p>
+<p><a href="demopage.html">Demo</a></p>
+<p><a href="client.html">Clients</a></p>
+<p><a href="createproject.html">Project Create</a></p>
 
-<p style="margin-left: 200px;">Log in</p>
-<button id="sing">Sign up</button>`;
+<p style="margin-left: 200px;"><a href="login.html">Log in</a></p>
+<button id="sing"><a href="signup.html">Sign up</a></button>`;
 };
 
 export default navbar;
