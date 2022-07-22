@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=11, initial-scale=1.0">
+    <style>
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+           
+        }
+        .install
+        {
+            display: block;
+            margin: auto;
+             margin-top: 50px;
+             margin-bottom: 10px;
+            width: 32%;
+            border-radius: 4px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+            padding:15px 35px;
+            /* color: gray; */
+        }
+        .head
+        {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .para
+        {
+            display: block;
+            margin: 10px  auto  ;
+            line-height: 22px;
+            color: grey;
+            text-align: center;
+            width:90%;
+        }
+        .button
+        {
+            width: 90%;
+            display: block;
+        color: white;
+        font-size:16px;
+        background-color:rgba(0, 128, 0, 0.736);
+        padding: 12px 0px;
+        border: none;
+        border-radius: 3px;
+        margin: 12px auto;
+        
+        }
+        label
+        {
+                           
+            font-size: large;
+             margin-left: 20px;
+        }
+        .project
+        {
+            display: block;
+      margin: auto;
+        width: 90%;
+        font-size:16px;
+        padding: 10px ;
+        margin-bottom: -10px 
+        }
+        .top
+        {
+            margin-top: 60px;
+        }
+        #check
+        {
+            margin: 10px 0px;
+            margin-left: 20px;
+        }
+      #lb1
+      {
+        margin: 50px 0px;
+        font-size: 16px;
+        
+      }
+    .more
+    {
+        margin-left: 20px;
+        text-align: start;
+}
+.more:hover
+    {
+       color: blue;
+}
+    </style>
+    <title></title>
+</head>
+<body>
+ <div class="install">
+    <h2 class="head">Create first project</h2>
+    <p class="para">In Everhour, your team track time spent on concrete tasks. This keeps time organized  and easy to analyze </p><br>
+    <form action="">    <label for="">Project</label><br>
+        <input type="name" name="" class="project " id="name" placeholder="Project name..." required><br>
+      <input type="checkbox"  name="" id="check" > <label for="" id="lb1">This project is billable</label><br><br>
+      <label for="">Client</label><br>
+      <input type="name" name="" class="project"  id="client" placeholder="Client name (optional)..."><br><br>
+      <label for="">Tasks</label><br>
+      <input type="text" name="" value="Business Development" id="val" class="project"><br>
+      <input type="text" name="" value="Design" class="project" id="val1"><br>
+      <input type="text" name="" value="Project Management" id="val2" class="project"><br>
+      <input type="name" name="" class="project"  placeholder="Task name..." id="task"><br>
+      <p class="more para">Add more</p>
+      <input type="submit" class="button" id="next" value="Create" >
+       </form>
+
+   
+</div>
+</body>
+</html>
+<script>
+  
+  document.querySelector("form").addEventListener("submit",(el)=>
+  {
+el.preventDefault();
+let name = document.getElementById("name").value
+let client = document.getElementById("client").value
+let val = document.getElementById("val").value
+let val1 = document.getElementById("val1").value
+let val2 = document.getElementById("val2").value
+let task = document.getElementById("task").value
+let data = new Data(name,client,val,val1,val2,task)
+// please Store in local stoage
+  })
+
+function Data(n,c,v,v1,v2,t)
+{
+    this.project=n;
+    this.client=c;
+    this.task1=v;
+    this.task2=v1;
+    this.task3=v2;
+    this.task4=t;
+}
+
+</script>
