@@ -1,15 +1,15 @@
-*
-{
-    padding: 0px;
+                                              /* Sign up page main div */
+
+* {
     margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-    color: gray;
-}
+    font-family: Lato, sans-serif;
 
-                                                    /* Sign up page main div */
-
+  }
 .main
 {
+    color: gray;
     width: 80%;
     margin: auto;
    margin-top: 80px;
