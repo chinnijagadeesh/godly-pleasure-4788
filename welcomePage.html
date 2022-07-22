@@ -160,22 +160,22 @@
       btn.innerHTML = null;
       let a = document.createElement("a");
       a.innerText = "Continue";
-      a.setAttribute("href", "integrate.html");
+      // a.setAttribute("href", "integrate.html");
       btn.append(a);
-      let form = document.getElementById("form");
-      let dataLS = JSON.parse(localStorage.getItem("userdata")) || [];
-      let storeData = () => {
-        let dataObj = new constructor(
-          form.name.value,
-          form.title.value,
-          form.phone.value
-        );
-        dataLS.push(dataObj);
-        localStorage.setItem("userdata", JSON.stringify(dataObj));
-      };
     } else {
       btn.style.backgroundColor = "#57bb71";
       btn.setAttribute("disabled");
     }
   }
+  let form = document.getElementById("form");
+  let dataLS = JSON.parse(localStorage.getItem("userdata")) || [];
+  let storeData = () => {
+    let dataObj = new constructor(
+      form.name.value,
+      form.title.value,
+      form.phone.value
+    );
+    dataLS.push(dataObj);
+    localStorage.setItem("userdata", JSON.stringify(dataObj));
+  };
 </script>
