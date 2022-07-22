@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clients - Everhour</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: Lato, sans-serif;
+        color: #333;
+      }
+      #Container {
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+      }
+      #main > h1 {
+        text-align: center;
+        font-size: 50px;
+        line-height: 1.17;
+        font-weight: 500;
+      }
+      #main > h3 {
+        font-family: "geomanist-regular", sans-serif;
+        font-weight: 400;
+        font-size: 1.375rem;
+        line-height: 1.36;
+        color: #767676;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      tr > th {
+        border: 1px solid transparent;
+        background-color: #57bb71;
+        color: white;
+        padding: 4px 6px;
+        font-size: medium;
+        font-weight: bold;
+        padding: 10px 20px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        padding: 15px 30px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      form > input {
+        display: block;
+        margin-bottom: 10px;
+        margin: auto;
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        border: transparent;
+        padding: 15px 0;
+        border-radius: 5px;
+        margin-top: -10px;
+      }
+      #form > input::placeholder {
+        padding-left: 10px;
+        color: #a5b0bb;
+      }
+      form > select {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        border: transparent;
+        padding: 15px 0;
+        border-radius: 5px;
+        margin-top: -10px;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+      form > input:last-child {
+        background-color: #57bb71;
+        color: white;
+        border-radius: 4px;
+        width: 100%;
+        margin: 15px 0;
+      }
+      form > input:last-child:hover {
+        background-color: #2ae35b;
+        box-shadow: 0 0 30px 0 rgb(26 191 104 / 40%);
+        cursor: pointer;
+      }
+      form > h3 {
+        font-weight: 400;
+        font-size: 1.375rem;
+        text-align: center;
+        margin: 1.5rem 0;
+      }
+      table {
+        width: 100%;
+        height: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      #table {
+        width: 55%;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      tbody > tr > td {
+        text-align: center;
+        width: 50%;
+        border: 1px solid transparent;
+        background-color: #57bb71;
+        color: white;
+        font-size: medium;
+        font-weight: bold;
+        padding: 10px 20px;
+      }
+      tbody > tr > td:last-child:hover {
+        cursor: pointer;
+        background-color: #1de151;
+      }
+    </style>
+  </head>
+  <body onload="append(dataLS)">
+    <div id="Navbar"></div>
+    <div id="main">
+      <h1>All Clients are here</h1>
+      <h3>Here you can create new Client and track all status</h3>
+      <div id="Container">
+        <form id="form">
+          <h3>Create Client</h3>
+          <label for="">Client Name</label><br />
+          <input id="name" type="text" /><br />
+          <label for="">Projects</label><br />
+          <select id="projects">
+            <option>Select projects...</option>
+            <option>Hour Over</option></select
+          ><br />
+          <label for="">Email</label><br />
+          <input type="text" id="email" /><br />
+          <label for="">Business Details</label><br />
+          <input id="details" type="text" /><br />
+          <label for="">Tax,%</label><br />
+          <input id="tax" type="number" /><br />
+          <label for="">Discount,%</label><br />
+          <input id="discount" type="number" /><br />
+          <label for="">Work Status</label><br />
+          <select id="fltr">
+            <option>Active</option>
+            <option>Pending</option>
+            <option>Favourite</option></select
+          ><br />
+          <label for="">Due Terms</label><br />
+          <select id="due">
+            <option>Immediately</option>
+            <option>+3 days</option>
+            <option>+5 days</option>
+            <option>+10 days</option>
+            <option>+15 days</option>
+            <option>+21 days</option>
+            <option>+30 days</option>
+            <option>+60 days</option></select
+          ><br />
+          <input type="submit" value="Create Client" />
+        </form>
+        <div id="table">
+          <table>
+            <thead>
+              <tr>
+                <th>Client Name</th>
+                <th>Projects</th>
+                <th>Email</th>
+                <th>Due Terms</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  let form = document.getElementById("form");
+  let dataLS = JSON.parse(localStorage.getItem("clienData")) || [];
+  form.addEventListener("submit", storeData);
+  function storeData(event) {
+    event.preventDefault();
+    let na = form.name.value;
+    let pro = form.projects.value;
+    let em = form.email.value;
+    let de = form.details.value;
+    let ta = form.tax.value;
+    let disc = form.discount.value;
+    let dueT = form.due.value;
+    let fil = form.fltr.value;
+    let dataObj = new constructor(na, pro, em, de, ta, disc, dueT, fil);
+    dataLS.push(dataObj);
+    localStorage.setItem("clienData", JSON.stringify(dataLS));
+    window.location.reload();
+  }
+
+  function constructor(c, p, e, b, t, d, du, f) {
+    this.clientName = c;
+    this.project = p;
+    this.email = e;
+    this.details = d;
+    this.tax = t;
+    this.discount = d;
+    this.dueTerms = du;
+    this.filter = f;
+  }
+  function append(data) {
+    let tb = document.querySelector("tbody");
+    tb.innerHTML = null;
+    data.forEach(function (el, i) {
+      let tr = document.createElement("tr");
+      let td1 = document.createElement("td");
+      td1.innerText = el.clientName;
+      let td2 = document.createElement("td");
+      td2.innerText = el.project;
+      let td3 = document.createElement("td");
+      td3.innerText = el.email;
+      let td4 = document.createElement("td");
+      td4.innerText = el.dueTerms;
+      let td5 = document.createElement("td");
+      td5.innerText = "DONE";
+      td5.addEventListener("click", () => {
+        remove(i);
+      });
+      tr.append(td1, td2, td3, td4, td5);
+      tb.append(tr);
+    });
+  }
+  let remove = (i) => {
+    event.target.parentNode.remove();
+    dataLS.splice(i, 1);
+    localStorage.setItem("clienData", JSON.stringify(dataLS));
+  };
+</script>
