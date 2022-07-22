@@ -1,0 +1,253 @@
+.body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.thirtymin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.thirtymin>h1 {
+    font-family: 'geomanist-book', sans-serif;
+    font-weight: 400;
+    color: #333;
+    font-size: 2.8rem;
+    line-height: 1.17;
+}
+
+.thirtymin>h3 {
+    text-align: center;
+    margin-top: 0px;
+    font-family: 'geomanist-regular', sans-serif;
+    font-weight: 400;
+    font-size: 1.375rem;
+    line-height: 1.36;
+    color: #767676;
+}
+
+.thirtymin>button {
+    outline: 0;
+    cursor: pointer;
+    width: 200px;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1rem;
+    line-height: 1;
+    width: 200px;
+    height: 48px;
+    text-decoration: none;
+    transition: .3s;
+    background: #1abf68;
+    border: 0;
+    box-shadow: 0 0 30px 0 rgba(26, 191, 104, 0.4);
+    border-bottom: 200px;
+}
+
+.demo__list>h4,
+.demo__list>h4 {
+    font-family: 'geomanist-book', sans-serif;
+    font-weight: 400;
+    color: #333;
+    color: black;
+    margin-bottom: .5rem;
+    font-size: 1.25rem;
+    line-height: 1.44;
+    padding-left: 25 rem;
+    position: relative;
+}
+
+.demo__list>ul>li {
+    font-weight: 400;
+    font-family: 'geomanist-regular', sans-serif;
+    position: relative;
+    font-size: 1rem;
+    color: #7c7c7c;
+    line-height: 1.2;
+    padding-left: 2rem;
+}
+
+.demo__wrap {
+    position: relative;
+    top: -550px;
+    left: 700px;
+    width: 500px;
+}
+
+.demo__back {
+    margin-left: 350px;
+    margin-top: 100px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li::before {
+    content: "\2022";
+    color: #1abf68;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    font-size: 30px;
+    position: relative;
+    top: 5px;
+}
+
+.skip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skip>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.pulse__button {
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 4px;
+    background:#1abf68;
+    text-transform: none;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: normal;
+    min-width: 152px;
+    height: 48px;
+    margin-left: 15px;
+    margin-top: 0;
+}
+
+.pulse__input {
+    font-family: 'geomanist-regular', sans-serif;
+    width: 380px;
+    font-size: 1rem;
+    font-weight: normal;
+    background: #fff;
+    border-color: rgb(158, 158, 158);
+    transition: .3s;
+    outline: none;
+    border-radius: 4px;
+    border: solid 1px #979797;
+    color: #767676;
+    height: 50px;
+
+}
+
+.skip>h3 {
+    margin-bottom: .5rem;
+    font-family: 'geomanist-regular', sans-serif;
+    font-weight: 400;
+    color: #767676;
+    font-size: 1.2rem;
+    line-height: 1.45;
+    text-align: center;
+}
+
+.skip>h2 {
+    font-family: 'geomanist-book', sans-serif;
+    font-weight: 400;
+    color: #333;
+    color: black;
+    font-size: 2.0rem;
+    margin-top: 200px;
+    line-height: 1.22;
+}
+
+.footer {
+   
+    margin-top: 180px;
+    padding: 40px;
+    background-color: rgb(19, 19, 19);
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-family: 'geomanist-regular', sans-serif;
+    color: #807c7c;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.footer>div:first-child>img {
+    margin-top: 30px;
+    filter: invert(1);
+}
+
+.footer_column {
+    color: rgb(214, 210, 210);
+}
+
+.footer_column>ul li::before {
+    color: rgb(19, 19, 19);
+}
+
+.footer_column>ul>li:first-child {
+    color: rgb(150, 148, 148);
+}
+
+.footer_column>ul>li {
+    cursor: pointer;
+    margin-top: 1px;
+}
+
+.terms_condition{
+    font-family: 'geomanist-regular', sans-serif;
+    background-color: rgb(19, 19, 19);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 60px; 
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.terms_condition>div:nth-child(2)>img {
+    filter: invert(1);
+    margin-right: 8px;
+    width: 23px;
+}
+
+.terms_condition>div:nth-child(2)>i {
+    color: white;
+}
+
+.chatimg{
+    position: fixed;
+    right: 30px;
+    bottom: 10px;
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(101, 196, 101);
+    color: white;
+} 
+
+.chatimg>img {
+    position: relative;
+    top: 18px;
+    left: 18px;
+}  
+
+.footer {
+    margin-top: -350px;
+} 
