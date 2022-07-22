@@ -271,3 +271,12 @@ showData3(data4, "container3");
 showData3(data5, "container4");
 showData3(data6, "container5");
 showData3(data7, "container6");
+let signIn = document.getElementById("sing");
+let log = document.getElementById("slog");
+let darray = JSON.parse(localStorage.getItem("userdata"));
+console.log("darray:", darray.username.length);
+
+if (darray.username.length > 0) {
+  signIn.innerText = darray.username;
+  log.innerHTML = null;
+}
