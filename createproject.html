@@ -127,7 +127,10 @@ let val1 = document.getElementById("val1").value
 let val2 = document.getElementById("val2").value
 let task = document.getElementById("task").value
 let data = new Data(name,client,val,val1,val2,task)
-// please Store in local stoage
+localStorage.setItem("projectDetails",JSON.stringify(data));
+window.location.reload();
+        // Add link here
+window.location.href="#"
   })
 
 function Data(n,c,v,v1,v2,t)
