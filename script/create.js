@@ -1,4 +1,9 @@
-document.querySelector("form").addEventListener("submit", (el) => {
+
+
+
+
+document.querySelector("#form").addEventListener("submit", (el) => {
+  let arr = JSON.parse(localStorage.getItem("projectDetails")) || []
   el.preventDefault();
   let name = document.getElementById("name").value;
   let client = document.getElementById("client").value;
@@ -8,7 +13,8 @@ document.querySelector("form").addEventListener("submit", (el) => {
   let task = document.getElementById("task").value;
   let data = new Data(name, client, val, val1, val2, task);
 
-  localStorage.setItem("projectDetails", JSON.stringify(data));
+  arr.push(data)
+  localStorage.setItem("projectDetails", JSON.stringify(arr));
   // Add link here
   window.location.href = "client.html";
 });

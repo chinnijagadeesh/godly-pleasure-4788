@@ -1,10 +1,15 @@
 let form = document.getElementById("form");
 let dataLS = JSON.parse(localStorage.getItem("clienData")) || [];
+let arr = JSON.parse(localStorage.getItem("projectDetails"))
 form.addEventListener("submit", storeData);
 function storeData(event) {
   event.preventDefault();
   let na = form.name.value;
   let pro = form.projects.value;
+  arr.forEach((el) => {
+    let vlaue = el.project
+    pro.value = vlaue
+  })
   let em = form.email.value;
   let de = form.details.value;
   let ta = form.tax.value;
