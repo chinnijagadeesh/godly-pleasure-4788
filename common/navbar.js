@@ -29,7 +29,7 @@ let navbar = () => {
 <p><a href="client.html">Clients</a></p>
 <p><a href="createproject.html">Project Create</a></p>
 
-<p style="margin-left: 200px;"><a href="login.html">Log in</a></p>
+<p id="slog" style="margin-left: 200px;"><a href="login.html">Log in</a></p>
 <button id="sing"><a href="signup.html">Sign up</a></button>`;
 };
 

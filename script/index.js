@@ -27,3 +27,15 @@ id = setInterval(function () {
     document.getElementById("slideshow").append(img)
     i++
 }, 2000)
+
+
+
+let signIn = document.getElementById("sing");
+let log = document.getElementById("slog")
+let darray = (localStorage.getItem("userdata"))
+
+if (darray.length > 0) {
+    signIn.innerText = darray.
+    log.innerHTML = null
+}
+
