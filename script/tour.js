@@ -1,3 +1,7 @@
+import navbar from "../common/navbar.js";
+import footer from "../common/footer.js";
+document.getElementById("navbar").innerHTML = navbar();
+document.getElementById("footer").innerHTML = footer();
 let data1 = {
   p1: "Everything you need for workforce management",
   p2: "Everhour will make your daily job way easier and more organized",

@@ -34,6 +34,7 @@
 
 #footersecond>ul>li:hover {
     color: #969797;
+    cursor: pointer;
 }
 
 #footersecond>ul>:nth-child(1) {

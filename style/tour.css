@@ -3,7 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: "geomanist-book", sans-serif;
-    color: #333;
+    /* color: #333; */
 }
 
 #main {
@@ -12,8 +12,7 @@
 }
 
 #container1 {
-    margin: auto;
-    margin-bottom: 300px;
+    margin: 150px auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -151,4 +150,8 @@
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 50px;
+}
+
+#footer {
+    background-color: #151616;
 }
