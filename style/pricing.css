@@ -1,5 +1,4 @@
-*{
-    background-color:  #ffffff;
+* {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     outline: 0;
@@ -8,27 +7,28 @@
 
 
 
-#heading{
+#heading {
     margin-left: 320px;
     display: block;
     text-align: center;
     margin: auto;
     line-height: 0.8;
+    margin-top: 150px;
 }
 
-#heading > h1{
+#heading>h1 {
 
-    font-family: 'geomanist-book',sans-serif;
+    font-family: 'geomanist-book', sans-serif;
     font-weight: 500;
     color: #333;
     /* margin-left: 25px; */
     font-size: 50px;
-    
+
 }
 
-#heading > h3{
+#heading>h3 {
 
-    font-family: 'geomanist-book',sans-serif;
+    font-family: 'geomanist-book', sans-serif;
     /* font-weight: 300; */
     color: #7a7876;
     /* font-size: 25px; */
@@ -42,8 +42,33 @@
     /* font-weight: bold; */
 }
 
+button {
+    margin-top: 10px;
+    border-radius: 4px;
+    background: #57bb71;
+    font-size: 1rem;
+    padding: 14px 20px;
+    color: white;
 
-#magic{
+}
+
+
+
+input {
+    border-radius: 4px;
+    border: solid 1px #979797;
+    font-family: "geomanist-regular", sans-serif;
+    color: #767676;
+    padding: 0 1rem;
+    line-height: 1.5;
+    height: 48px;
+    width: 40%;
+    font-size: 1rem;
+
+    background: #fff;
+}
+
+#magic {
     width: 140px;
     height: 35px;
     display: flex;
@@ -55,56 +80,56 @@
     margin-top: 60px;
     margin-bottom: 30px;
     background-color: #f2fbf9;
-   
+
     cursor: pointer;
     /* padding: 5px; */
 }
 
-#magic > .div_1{
+#magic>.div_1 {
 
     /* margin-left: 2px; */
-     background-color: #f2fbf9;
-     color: #57bb71;
-     cursor: pointer;
+    background-color: #f2fbf9;
+    color: #57bb71;
+    cursor: pointer;
 
 }
 
-#magic > .div_2{
+#magic>.div_2 {
 
     /* margin-left: 2px; */
-     background-color: #f2fbf9;
-     color: #57bb71;
-     cursor: pointer;
+    background-color: #f2fbf9;
+    color: #57bb71;
+    cursor: pointer;
 
 }
 
 
-#magic > .div_1:visited{
+#magic>.div_1:visited {
 
     /* margin-left: 2px; */
-    background-color: white; 
+    background-color: white;
     border-radius: 25px;
     color: black;
-   padding: 7px;
+    padding: 7px;
 }
 
-#magic > .div_2:hover{
+#magic>.div_2:hover {
 
     /* margin-left: 2px; */
-    
-     /* background-color: #f2fbf9; */
-     cursor: pointer;
-     /* font-size: 10px; */
-     /* border: 1px solid black; */
-     background-color: white; 
-     border-radius: 25px;
-     color: black;
+
+    /* background-color: #f2fbf9; */
+    cursor: pointer;
+    /* font-size: 10px; */
+    /* border: 1px solid black; */
+    background-color: white;
+    border-radius: 25px;
+    color: black;
     padding: 7px;
 }
 
 
 
-#pricing_div{
+#pricing_div {
 
     width: 320px;
     height: 600px;
@@ -113,7 +138,7 @@
     margin-top: 30px;
 }
 
-hr{
+hr {
     width: 100%;
     margin: auto;
     margin-top: 5%;
@@ -137,7 +162,7 @@ hr{
     padding: 40px;
 
 
-    font-family: 'geomanist-regular',sans-serif;
+    font-family: 'geomanist-regular', sans-serif;
     color: #7c7c7c;
     font-size: 1rem;
     font-weight: 400;
@@ -166,14 +191,14 @@ hr{
 }
 
 
- .action-button {
+.action-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     margin: auto;
     margin-left: 40px;
     height: 3rem;
-    
+
     border-radius: 4px;
     background: #57bb71;
     text-transform: none;
@@ -188,13 +213,13 @@ hr{
     min-width: 152px;
     color: white;
     text-decoration: none;
-    
+
 
 }
 
 
 .geomanist-theme {
-    font-family: 'geomanist-regular',sans-serif;
+    font-family: 'geomanist-regular', sans-serif;
     color: #7c7c7c;
     font-size: 1rem;
     font-weight: 400;
@@ -202,14 +227,14 @@ hr{
 }
 
 
-.row{
+.row {
     margin-right: -0.5rem;
     margin-left: -0.5rem;
 }
 
 .row {
 
-    
+
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     /* display: -webkit-box;
@@ -237,13 +262,14 @@ hr{
     flex-basis: 100%;
     max-width: 50%;
     margin: auto;
-   
-    
+
+
 }
 
-.col-xs-12:first-child{
+.col-xs-12:first-child {
     margin-left: 100px;
 }
+
 [class*="col-xs"] {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -255,14 +281,15 @@ hr{
     padding-left: 0.5rem;
 }
 
-.col-xs-12 > h1,h3{
+.col-xs-12>h1,
+h3 {
 
     width: 90%;
-    
+
 }
 
 
-.col-xs-12 > h1 {
+.col-xs-12>h1 {
     font-size: 30px;
 }
 
@@ -286,7 +313,7 @@ hr{
 
 
 
- .container {
+.container {
     max-width: 1220px;
     padding: 0 40px;
     margin: 0 auto;
@@ -310,7 +337,7 @@ hr{
 
 .accordion-header {
     font-size: 1.125rem;
-    font-family: 'geomanist-book',sans-serif;
+    font-family: 'geomanist-book', sans-serif;
     padding: 1.5rem 0;
     line-height: 1.44;
     cursor: pointer;
@@ -321,15 +348,13 @@ hr{
     transition: -webkit-transform .2s ease-in-out;
     -o-transition: transform .2s ease-in-out;
     transition: transform .2s ease-in-out;
-    transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
 
 
 .accordion-body {
-    padding: 0 0 0.5rem
-rem
-;
+    padding: 0 0 0.5rem rem;
     color: #707070;
     display: none;
 }
@@ -341,7 +366,7 @@ rem
 }
 
 
- .container:after {
+.container:after {
     content: "";
     display: block;
     clear: both;
@@ -362,7 +387,7 @@ rem
     transition: -webkit-transform .2s ease-in-out;
     -o-transition: transform .2s ease-in-out;
     transition: transform .2s ease-in-out;
-    transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
     cursor: pointer;
     background-size: 100%;
 }
@@ -382,7 +407,7 @@ p {
 }
 
 
- .container {
+.container {
     max-width: 1220px;
     padding: 0 40px;
     margin: 0 auto;
@@ -394,11 +419,12 @@ p {
     margin-bottom: 3rem;
 }
 
- p {
+p {
     margin-top: 0;
     margin-bottom: 1rem;
     line-height: 1.44;
 }
+
 .center {
     text-align: center;
 }
@@ -411,6 +437,7 @@ p {
     justify-content: center;
     align-items: center;
 }
+
 .certificates {
     justify-content: center;
     align-items: center;
@@ -418,19 +445,27 @@ p {
 
 
 
- a {
+a {
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
 }
 
 
-input, textarea, button, select, .select2, li, a {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+input,
+textarea,
+button,
+select,
+.select2,
+li,
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
 }
+
 a {
-    color: #4a90e2;
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -451,7 +486,7 @@ a {
 }
 
 
- .bricks__item {
+.bricks__item {
     margin: 0.5rem;
     -webkit-transition: 1s ease all;
     background: #fff;
@@ -472,7 +507,8 @@ a {
     top: -0.5rem;
 }
 
- .bg-block-angle--left, .bg-block-angle--right {
+.bg-block-angle--left,
+.bg-block-angle--right {
     position: absolute;
     z-index: -1;
     max-width: 100%;
@@ -483,18 +519,19 @@ a {
 
 
 
- .bricks__item p {
+.bricks__item p {
     font-size: 1rem;
     line-height: 1.5;
     color: #7c7c7c;
     margin-bottom: 1rem;
 }
 
- p {
+p {
     margin-top: 0;
     margin-bottom: 1rem;
     line-height: 1.44;
 }
+
 /* p {
     margin-bottom: 15px;
     line-height: 1.5;
@@ -502,16 +539,17 @@ a {
 
 
 
- .bg-images {
+.bg-images {
     position: relative;
 }
- .bricks__card {
+
+.bricks__card {
     padding: 2.5rem;
     border: 2px solid #cef5d6;
     border-radius: 4px;
 }
 
- .bricks__item {
+.bricks__item {
     margin: 0.5rem;
     -webkit-transition: 1s ease all;
     background: #fff;
@@ -535,12 +573,14 @@ a {
     margin-right: -0.5rem;
     margin-left: -0.5rem;
 }
+
 .middle-xs {
     -webkit-box-align: center;
     -ms-flex-align: center;
     -moz-align-items: center;
     align-items: center;
 }
+
 .row {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -566,10 +606,12 @@ a {
 
 
 
- .page-title {
+.page-title {
     margin-bottom: 0.5rem;
 }
- h2,  .h2 {
+
+h2,
+.h2 {
     font-size: 2.25rem;
     line-height: 1.22;
 }
@@ -577,38 +619,42 @@ a {
 
 
 
- .page-subtitle {
+.page-subtitle {
     margin-bottom: 2rem;
 }
 
 
- .page-subtitle--improved h3 {
+.page-subtitle--improved h3 {
     font-size: 1.125rem;
     line-height: 1.44;
 }
 
 
- .page-subtitle h3 {
-    font-family: 'geomanist-regular',sans-serif;
+.page-subtitle h3 {
+    font-family: 'geomanist-regular', sans-serif;
     font-weight: 400;
     font-size: 1.375rem;
     line-height: 1.36;
     color: #767676;
 }
 
- h3,  .h3 {
+h3,
+.h3 {
     font-size: 1.75rem;
     line-height: 1.29;
 }
 
-
+#footer {
+    background-color: #333;
+}
 
 /* .simple-form {
-    font-family: 'geomanist-regular',sans-serif;
+    font-family: 'geomanist-regular', sans-serif;
     font-weight: 400;
     line-height: 1.5;
 }
- form {
+
+form {
     margin-top: 1.5rem;
 }
 
@@ -630,22 +676,23 @@ a {
 }
 
 
- .container:after {
+.container:after {
     content: "";
     display: block;
     clear: both;
-} */
+}
 
 
 
-/* 
-.simple-form .c-form__input, .geomanist-theme .simple-form .form-control {
+
+.simple-form .c-form__input,
+.geomanist-theme .simple-form .form-control {
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
     border-radius: 4px;
     border: solid 1px #979797;
-    font-family: 'geomanist-regular',sans-serif;
+    font-family: 'geomanist-regular', sans-serif;
     color: #767676;
     padding: 0 1rem;
     line-height: 1.5;
@@ -660,9 +707,10 @@ a {
 }
 
 
- .simple-form .c-form__input {
+.simple-form .c-form__input {
     flex: 1;
 }
+
 .simple-form input {
     border-radius: 2px;
     border: solid 1px #e6e6e6;
@@ -687,10 +735,18 @@ a {
     font-size: 14px;
     line-height: 1.21;
 }
-input, textarea, button, select, .select2, li, a {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+input,
+textarea,
+button,
+select,
+.select2,
+li,
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
 }
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -703,7 +759,7 @@ input[type="email" i] {
 
 input {
     writing-mode: horizontal-tb !important;
-   
+
     text-rendering: auto;
     color: fieldtext;
     letter-spacing: normal;
@@ -735,18 +791,26 @@ input {
 
 
 
- .dot-list li:not(:last-child) {
+.dot-list li:not(:last-child) {
     margin-bottom: 0.6rem;
 }
 
- .dot-list li:not(:last-child) {
+.dot-list li:not(:last-child) {
     margin-bottom: 1rem;
 }
+
 .dot-list li {
     padding-left: 2rem;
     position: relative;
 }
-input, textarea, button, select, .select2, li, a {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+input,
+textarea,
+button,
+select,
+.select2,
+li,
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
 } */
