@@ -149,6 +149,7 @@
           .coupon:hover
           {
               color: blue;
+              cursor: pointer;
           }
           .pay
           {

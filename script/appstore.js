@@ -39,5 +39,5 @@ document.body.append(container,down);
 next.addEventListener("click",()=>
 {
  // Add Link here to redirected to next page
- window.location.href="#"
+ window.location.href="billing.html"
  });

@@ -99,7 +99,7 @@ id=setInterval(function()
     clearInterval(id);
 
     // Add Link Here to redirected to next page
-    window.location.href="#"
+    window.location.href="index.html"
   }
   else
   {

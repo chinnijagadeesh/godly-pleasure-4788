@@ -26,6 +26,7 @@
 
 .hover:hover {
     color: #57bb71;
+    cursor: pointer;
 }
 
 .after-headline {
@@ -166,6 +167,7 @@
 
 .commo:hover {
     color: #57bb71;
+    cursor: pointer;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
