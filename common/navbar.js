@@ -23,7 +23,7 @@ let navbar = () => {
             <img src="https://www.jetro.go.jp/ext_images/_Newsroom/2020/3rd/0903.png" alt="" />
         </div>
         </div> 
-<p>Customers</p>
+<p> <a href="customer.html">Customers</a></p>
 <p>Pricing</p>
 <p>Demo</p>
 <p>Clients</p>

@@ -59,6 +59,9 @@
         border-bottom: 7px solid rgb(252, 231, 212);
         border-left: 7px solid rgb(252, 231, 212);
     }
+    #footer {
+        background-color: #151616;
+    }
 
     .landing-review__photo
     {
