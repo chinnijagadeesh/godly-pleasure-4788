@@ -40,3 +40,10 @@ next.addEventListener("click", () => {
   // Add Link here to redirected to next page
   window.location.href = "createproject.html";
 });
+let dataforname = JSON.parse(localStorage.getItem("credentials"));
+dataforname.forEach((el) => {
+  document.getElementById("showName").innerHTML = null;
+  let p = document.createElement("p");
+  p.innerText = el.email[0];
+  document.getElementById("showName").append(p);
+});

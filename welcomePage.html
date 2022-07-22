@@ -5,119 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Onboarding - Everhour</title>
-    <style>
-      * {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-        font-family: Lato, sans-serif;
-        color: #333;
-      }
-
-      #container {
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        width: 30%;
-        margin: auto;
-        text-align: center;
-        padding: 30px 50px;
-        margin-top: 80px;
-      }
-
-      #container > h2 {
-        font-size: 22px;
-        font-weight: 550;
-      }
-
-      #container > p {
-        color: #a2aab1;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 22px;
-        margin: 15px 0;
-      }
-      #form {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        text-align: left;
-      }
-      #form > p {
-        font-size: 14px;
-        font-weight: 600;
-        margin-top: 25px;
-      }
-      #form > input {
-        padding: 15px 0;
-      }
-
-      #form > input::placeholder {
-        padding-left: 10px;
-        color: #a5b0bb;
-      }
-
-      button {
-        width: 100%;
-        padding: 15px;
-        margin-top: 25px;
-        background-color: transparent;
-        box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px,
-          rgb(27 31 35 / 15%) 0px 0px 0px 1px;
-        border: transparent;
-        cursor: pointer;
-        border-radius: 4px;
-        font-size: 14px;
-        background: #57bb71;
-        color: white;
-      }
-      button:hover {
-        box-shadow: 0 0 30px 0 rgb(26 191 104 / 40%);
-        cursor: pointer;
-      }
-
-      a {
-        text-decoration: none;
-        color: white;
-      }
-      #navbar {
-        display: flex;
-        justify-content: space-between;
-        box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px,
-          rgb(27 31 35 / 15%) 0px 0px 0px 1px;
-        padding: 10px;
-      }
-      #navbar > div > img {
-        margin-left: 20px;
-        width: 30%;
-      }
-      #navbar > div:nth-child(2) {
-        margin-right: 20px;
-        border: 1px solid red;
-        border-radius: 50%;
-        padding: 20px;
-      }
-      #term {
-        display: flex;
-        gap: 3px;
-        margin-top: 25px;
-      }
-      #term > p {
-        font-size: 14px;
-      }
-      #term > p > a {
-        text-decoration: none;
-        color: #6b9ce7;
-      }
-      #term > p > a:hover {
-        color: #1567e1;
-      }
-    </style>
+    <link rel="stylesheet" href="./style/wcnavbar.css" />
+    <link rel="stylesheet" href="./style/welcome.css" />
   </head>
   <body>
     <div id="navbar">
       <div>
         <img src="https://app.everhour.com/assets/img/everhour_48.svg" alt="" />
       </div>
-      <div></div>
+      <div id="showName"></div>
     </div>
     <div id="main">
       <div id="container">
@@ -160,7 +56,7 @@
       btn.innerHTML = null;
       let a = document.createElement("a");
       a.innerText = "Continue";
-      // a.setAttribute("href", "integrate.html");
+      a.setAttribute("href", "integrate.html");
       btn.append(a);
     } else {
       btn.style.backgroundColor = "#57bb71";
@@ -178,4 +74,12 @@
     dataLS.push(dataObj);
     localStorage.setItem("userdata", JSON.stringify(dataObj));
   };
+
+  let data = JSON.parse(localStorage.getItem("credentials"));
+  data.forEach((el) => {
+    document.getElementById("showName").innerHTML = null;
+    let p = document.createElement("p");
+    p.innerText = el.email[0];
+    document.getElementById("showName").append(p);
+  });
 </script>

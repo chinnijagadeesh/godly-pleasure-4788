@@ -1,3 +1,6 @@
+import smallnav from "../common/smallNavbar.js";
+document.getElementById("navbar").innerHTML = smallnav();
+
 let data = [
   {
     img: "https://app.everhour.com/assets/img/integrations/integration-asana-full.svg",
@@ -57,3 +60,11 @@ let showData = (dt) => {
 };
 
 showData(data);
+
+let dataforname = JSON.parse(localStorage.getItem("credentials"));
+dataforname.forEach((el) => {
+  document.getElementById("showName").innerHTML = null;
+  let p = document.createElement("p");
+  p.innerText = el.email[0];
+  document.getElementById("showName").append(p);
+});

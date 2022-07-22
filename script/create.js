@@ -10,7 +10,7 @@ document.querySelector("form").addEventListener("submit", (el) => {
 
   localStorage.setItem("projectDetails", JSON.stringify(data));
   // Add link here
-  window.location.href = "client.html"
+  window.location.href = "client.html";
 });
 
 function Data(n, c, v, v1, v2, t) {
@@ -21,3 +21,11 @@ function Data(n, c, v, v1, v2, t) {
   this.task3 = v2;
   this.task4 = t;
 }
+
+let dataforname = JSON.parse(localStorage.getItem("credentials"));
+dataforname.forEach((el) => {
+  document.getElementById("showName").innerHTML = null;
+  let p = document.createElement("p");
+  p.innerText = el.email[0];
+  document.getElementById("showName").append(p);
+});
