@@ -26,7 +26,10 @@ let navbar = () => {
 <p>Customers</p>
 <p>Pricing</p>
 <p>Demo</p>
-<p style="margin-left: 400px;">Log in</p>
+<p>Clients</p>
+<p>Project Create</p>
+
+<p style="margin-left: 200px;">Log in</p>
 <button id="sing">sing up</button>`
 }
 
