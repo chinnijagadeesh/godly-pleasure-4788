@@ -1,0 +1,86 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+   
+}
+.install
+{
+    display: block;
+    margin: auto;
+     margin-top: 50px;
+     margin-bottom: 10px;
+    width: 32%;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+    padding:15px 35px;
+    /* color: gray; */
+}
+.head
+{
+    margin-top: 20px;
+    text-align: center;
+}
+.para
+{
+    display: block;
+    margin: 10px  auto  ;
+    line-height: 22px;
+    color: grey;
+    text-align: center;
+    width:90%;
+}
+.button
+{
+    width: 90%;
+    display: block;
+color: white;
+font-size:16px;
+background-color:rgba(0, 128, 0, 0.736);
+padding: 12px 0px;
+border: none;
+border-radius: 3px;
+margin: 12px auto;
+
+}
+label
+{
+                   
+    font-size: large;
+     margin-left: 20px;
+}
+.project
+{
+    display: block;
+margin: auto;
+width: 90%;
+font-size:16px;
+padding: 10px ;
+margin-bottom: -10px 
+}
+.top
+{
+    margin-top: 60px;
+}
+#check
+{
+    margin: 10px 0px;
+    margin-left: 20px;
+}
+#lb1
+{
+margin: 50px 0px;
+font-size: 16px;
+
+}
+.more
+{
+margin-left: 20px;
+text-align: start;
+}
+.more:hover
+{
+color: blue;
+}

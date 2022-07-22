@@ -1,0 +1,255 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+
+  }
+                                                    /* Customers page Main div */
+
+    .main
+    {
+        margin: auto;
+        width: 80%
+    }
+    .top-section
+    {
+    
+        width: 100%;
+        font-size: 25px;
+    text-align: center;
+    margin: 10% auto;
+    }
+    .rating
+    {
+    
+        font-size: large;
+        color: gray;
+        margin-bottom: 8px;
+    }
+
+                                                /*Containers for Each person */
+
+    .container
+    {
+        height: 100%;
+        height: auto;
+        display: flex;
+    }
+
+    .landing-review__container
+    {
+    width: 60%;
+    height: auto;
+    }
+
+    .reviews-wrapper
+    {
+        margin-bottom: 10%;
+    }
+
+
+                                                /* line affects for containers */
+    .comment-brackets
+    {
+        width: 80%;
+        height: 60%;
+        margin-top: -56%;
+        margin-left: -43%;
+        border-bottom: 7px solid rgb(252, 231, 212);
+        border-left: 7px solid rgb(252, 231, 212);
+    }
+
+    .landing-review__photo
+    {
+        height: 100%;
+    }
+
+    .landing-review__text
+    {
+        margin-left: 30px;
+    }
+    #img
+    {
+        display: block;
+        margin: auto;
+        width: 70%;
+        height: 100%;
+
+    }
+
+    .subtitle__text
+    {
+   
+    margin: auto;
+    font-size:19px;
+    line-height: 26px;
+    width: 60%;
+    margin-top: 60px;
+    }
+
+
+    .page-title
+    {
+    
+        width: 68%;
+        font-size:36px
+    }
+
+    .highlight-text
+    {
+        background-color: rgb(245, 245, 153);
+    }
+    .regular
+    {
+    padding-bottom: -50px;
+    font-size: 10em;
+    padding-top: 50px;
+    margin-left: -130px;
+    margin-bottom: -80px;
+    color: rgb(183, 225, 193);    
+    }
+
+
+                                                            /* bottom paragraph */
+    .bottom_para
+    {
+        margin-top:20px;
+    }
+
+
+                                                        /* Time Tracker container */
+
+
+    #six-div {
+        width: 85%;
+        display: flex;
+        margin: auto;
+        margin-bottom: 5%;
+        justify-content: space-around;
+    }
+
+    #six-div>img {
+    margin: 70px 0px;
+        height:78px;
+    }
+
+
+    .timetrack
+    {
+        width: 100%;
+        margin-top:16%;
+        margin-bottom:4%
+    
+    }
+    .track
+    {
+        text-align: center;
+        color: grey;
+    }
+
+
+                                                                /* bottom containers */
+
+        .flex   
+        {
+            display: flex;
+        justify-content: center;
+        font-size: 17px;
+        gap: 10px;
+        }
+
+        .bricks
+        {
+            width:100%;
+        padding: 40px 0px;   
+        }
+
+        .bricks__item
+        {
+            color: gray;
+            font-size: large;
+            line-height: 25px;
+            border:1px solid rgb(183, 244, 183);
+            padding: 40px;
+            margin-left: 30px;
+            margin-bottom: 50px;
+        }
+
+
+
+                                                            /* Media Queries */
+    @media only screen and (max-width: 1480px) and (min-width:1080px)
+    { 
+        .subtitle__text
+        {
+        width:60%;
+            margin: auto;
+            font-size:19px;
+            line-height: 25px;
+            /* width: 80%; */
+        margin-top: 50px;
+        margin-bottom: 40px;
+        }
+        .comment-brackets
+    {
+    
+        width: 60%;
+        height: 50%;
+        border-bottom: 7px solid rgb(252, 231, 212);
+        border-left: 7px solid rgb(252, 231, 212);
+        margin-bottom: 30%;
+        margin-top: -32%;
+        margin-left: -43%;
+    }
+    .landing-review__container
+    {
+        margin-bottom: 20%;
+    }
+    .page-title
+    {
+    
+        width: 98%;
+        font-size:34px
+    }
+
+    }
+    
+    @media only screen and (max-width: 1080px) and (min-width:840px)
+    { 
+        #main
+        {
+            width: 80%;
+        }
+        .subtitle__text
+        {
+        width:80%;
+            margin: auto;
+            font-size:19px;
+            line-height: 25px;
+        margin-top: 50px;
+        margin-bottom: 10%;
+        /* padding-bottom: 10%; */
+        }
+        .comment-brackets
+    {
+    
+        width: 80%;
+        height: 50%;
+        border-bottom: 7px solid rgb(252, 231, 212);
+        border-left: 7px solid rgb(252, 231, 212);
+        margin-top: -52%;
+        margin-left: -43%;
+    margin-bottom: 30%;
+    }
+    .landing-review__container
+    {
+        margin-bottom: 20%;
+    }
+    .page-title
+    {
+    
+        width:114%;
+        font-size:32px
+    }
+    }
