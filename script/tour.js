@@ -24,6 +24,9 @@ let showData1 = (data) => {
   h3.innerText = data.p2;
   inp.placeholder = "Work email...";
   btn.innerText = "Get started";
+  btn.addEventListener("click", () => {
+    window.location.href = "signup.html";
+  });
   img.src = data.Image;
   div1.append(h1, h3, inp, btn);
   div2.append(img);
