@@ -114,7 +114,7 @@ span.addEventListener("click", () => {
           i++;
           alert(arr[i]);
         }
-      }, 2000);
+      }, 2500);
     } else {
       alert("Card detailes are wrong !");
     }
