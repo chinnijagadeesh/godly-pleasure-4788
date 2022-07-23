@@ -1,22 +1,23 @@
+import nav from "../common/smallNavbar.js"
+document.getElementById("navbar").innerHTML=nav()
+
+import footer from "../common/footer.js"
+document.getElementById("footer").innerHTML=footer()
+
 let child = document.querySelector(".child");
 let span = document.createElement("span");
 span.innerHTML=`<button class="click">Subscribe  </button> <span id="history"> Billing History</span> `
 span.addEventListener("click",()=>
-{
-   child.innerHTML="";      
+{ 
+child.innerHTML="";      
 child.innerHTML=`  <label for="" id="label" class="sub">Select plan</label><br><select class="teamplan" id='select'>
-<option value="50.00 ($50 minimum price)">Team plan (Monthly) </option>
-<option value="$510.00 ($50 minimum price ). You save $90">Team plan (Annual) </option>
+<option value="$50.00 ( $50 minimum price )">Team plan (Monthly) </option>
+<option value="$510.00 ( You save $90 )">Team plan (Annual) </option>
 </select> 
 <span id="history"> Billing History</span>
 <p id="label"  class="sub">Pay Today</p>
-
-
-
-<h1>${"$56"}</h1>
-
-
-
+<br>
+<div id="price"></div>
 <p class="para">Your credit card details (securely processed via Stripe)</p>
 <form>
 <div class="card-details">
@@ -82,8 +83,14 @@ child.innerHTML=`  <label for="" id="label" class="sub">Select plan</label><br><
 <p id="history">Cancel</p>
 </div>
 </div>
-</form>
-`
+</form> `
+
+let val=document.getElementById("select");
+document.getElementById("price").innerText=val.value
+val.addEventListener("click",()=>
+{
+  document.getElementById("price").innerText=val.value
+})
 
 document.querySelector("form").addEventListener("submit",(el)=>
 {

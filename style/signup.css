@@ -7,6 +7,10 @@
     font-family: Lato, sans-serif;
 
   }
+  #footer {
+    background-color: #151616;
+}
+
 .main
 {
     color: gray;
