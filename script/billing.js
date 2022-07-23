@@ -4,16 +4,14 @@ span.innerHTML=`<button class="click">Subscribe  </button> <span id="history"> B
 span.addEventListener("click",()=>
 {
    child.innerHTML="";      
-child.innerHTML=`  <label for="" id="label" class="sub">Select plan</label><br><select class="teamplan" id='select'>
-<option value="50.00 ($50 minimum price)">Team plan (Monthly) </option>
-<option value="$510.00 ($50 minimum price ). You save $90">Team plan (Annual) </option>
+child.innerHTML=`  <label for="" id="label" class="sub">Select plan</label><br><select  id='select'>
+<option value="$50.00 ($50 minimum price)">Team plan (Monthly) </option>
+<option value="$510.00 ($50 minimum price ).You save $90">Team plan (Annual) </option>
 </select> 
 <span id="history"> Billing History</span>
 <p id="label"  class="sub">Pay Today</p>
 
-
-
-<h1>${"$56"}</h1>
+<h3  id="value"></h3>
 
 
 
@@ -85,11 +83,19 @@ child.innerHTML=`  <label for="" id="label" class="sub">Select plan</label><br><
 </form>
 `
 
+// document.getElementById("value").innerText=
+let val=document.getElementById("select");
+document.getElementById("value").innerText=val.value
+val.addEventListener("change",()=>
+{
+  document.getElementById("value").innerText=val.value
+})
+
 document.querySelector("form").addEventListener("submit",(el)=>
 {
 el.preventDefault();
 let id;
-let arr=["Payment confirmed","Please Wait fetching your data","Transaction is in process","Your transaction is Successful",]
+let arr=["Payment confirmed","Transaction is in process","Your transaction is Successful",]
 let i=0;
 alert(arr[0]);
 id=setInterval(function()
