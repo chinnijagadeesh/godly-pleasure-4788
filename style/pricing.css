@@ -648,16 +648,16 @@ h3,
     background-color: #333;
 }
 
-button{
+button {
     border-style: none
 }
 
-.buy_btn{
+.buy_btn {
     margin-left: 70px;
     margin-top: 20px;
 }
 
-.buy_btn:hover{
+.buy_btn:hover {
     box-shadow: rgba(8, 250, 68, 0.35) 0px 5px 15px;
 
 }

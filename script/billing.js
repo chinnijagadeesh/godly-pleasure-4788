@@ -1,16 +1,15 @@
-import nav from "../common/smallNavbar.js"
-document.getElementById("navbar").innerHTML=nav()
+import nav from "../common/smallNavbar.js";
+document.getElementById("navbar").innerHTML = nav();
 
-import footer from "../common/footer.js"
-document.getElementById("footer").innerHTML=footer()
+import footer from "../common/footer.js";
+document.getElementById("footer").innerHTML = footer();
 
 let child = document.querySelector(".child");
 let span = document.createElement("span");
-span.innerHTML=`<button class="click">Subscribe  </button> <span id="history"> Billing History</span> `
-span.addEventListener("click",()=>
-{ 
-child.innerHTML="";      
-child.innerHTML=`  <label for="" id="label" class="sub">Select plan</label><br><select class="teamplan" id='select'>
+span.innerHTML = `<button class="click">Subscribe  </button> <span id="history"> Billing History</span> `;
+span.addEventListener("click", () => {
+  child.innerHTML = "";
+  child.innerHTML = `  <label for="" id="label" class="sub">Select plan</label><br><select class="teamplan" id='select'>
 <option value="$50.00 ( $50 minimum price )">Team plan (Monthly) </option>
 <option value="$510.00 ( You save $90 )">Team plan (Annual) </option>
 </select> 
@@ -83,37 +82,44 @@ child.innerHTML=`  <label for="" id="label" class="sub">Select plan</label><br><
 <p id="history">Cancel</p>
 </div>
 </div>
-</form> `
+</form> `;
 
-let val=document.getElementById("select");
-document.getElementById("price").innerText=val.value
-val.addEventListener("click",()=>
-{
-  document.getElementById("price").innerText=val.value
-})
+  let val = document.getElementById("select");
+  document.getElementById("price").innerText = val.value;
+  val.addEventListener("click", () => {
+    document.getElementById("price").innerText = val.value;
+  });
 
-document.querySelector("form").addEventListener("submit",(el)=>
-{
-el.preventDefault();
-let id;
-let arr=["Payment confirmed","Please Wait fetching your data","Transaction is in process","Your transaction is Successful",]
-let i=0;
-alert(arr[0]);
-id=setInterval(function()
-{
-  if(i==arr.length-1)
-  {
-    clearInterval(id);
+  document.querySelector("form").addEventListener("submit", (el) => {
+    el.preventDefault();
+    let id;
+    let arr = [
+      "Payment confirmed",
+      "Please Wait fetching your data",
+      "Transaction is in process",
+      "Your transaction is Successful",
+    ];
+    let i = 0;
+    alert(arr[0]);
+    id = setInterval(function () {
+      if (i == arr.length - 1) {
+        clearInterval(id);
 
-    // Add Link Here to redirected to next page
-    window.location.href="index.html"
-  }
-  else
-  {
-    i++ 
-    alert(arr[i]);
-  }
-},3000);
-})
-})
-child.append(span)
+        // Add Link Here to redirected to next page
+        window.location.href = "index.html";
+      } else {
+        i++;
+        alert(arr[i]);
+      }
+    }, 3000);
+  });
+});
+child.append(span);
+
+let dataforname = JSON.parse(localStorage.getItem("credentials"));
+dataforname.forEach((el) => {
+  document.getElementById("showName").innerHTML = null;
+  let p = document.createElement("p");
+  p.innerText = el.email[0];
+  document.getElementById("showName").append(p);
+});
