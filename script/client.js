@@ -54,17 +54,22 @@ let remove = (i) => {
   dataLS.splice(i, 1);
   localStorage.setItem("clienData", JSON.stringify(dataLS));
 };
-let signIn = document.getElementById("sing");
-let log = document.getElementById("slog");
-let darray = JSON.parse(localStorage.getItem("userdata"));
 
-if (darray.username.length > 0) {
-  signIn.innerText = darray.username;
-  log.innerHTML = null;
+
+
+
+
+let mster = localStorage.getItem("check")
+console.log(mster)
+if (mster == "tures") {
+  let signIn = document.getElementById("sing");
+  let log = document.getElementById("slog");
+  let darray = JSON.parse(localStorage.getItem("userdata"));
+  console.log("darray:", darray.username.length);
+
+  if (darray.username.length > 0) {
+    signIn.innerText = darray.username;
+    log.innerHTML = null;
+  }
 }
 
-let val = document.getElementById("filter");
-val.addEventListener("change", filterData);
-function filterData() {
-  console.log(val.value);
-}

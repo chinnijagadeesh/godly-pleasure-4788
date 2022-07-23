@@ -9,11 +9,14 @@ let form = document.querySelector(".form");
 
 form.addEventListener("submit", (el) => {
   el.preventDefault();
+  console.log(222)
   let email = document.getElementById("email").value;
   let pass = document.getElementById("password").value;
   if (checkdata(email, pass) === true) {
     alert("Log in success");
     window.location.href = "index.html";
+    let mast = "tures"
+    localStorage.setItem("check", mast)
   } else {
     alert("Invalid credentials");
   }
@@ -29,3 +32,17 @@ let checkdata = (email, pass) => {
     return false;
   }
 };
+
+
+// let mast = () => {
+//   let signIn = document.getElementById("sing");
+//   let log = document.getElementById("slog");
+//   let darray = JSON.parse(localStorage.getItem("userdata"));
+//   console.log("darray:", darray.username.length);
+
+//   if (darray.username.length > 0) {
+//     log.innerText = darray.username;
+//     signIn.innerHTML = null;
+//   }
+
+// }

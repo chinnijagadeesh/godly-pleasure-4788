@@ -10,7 +10,7 @@ document.querySelector("form").addEventListener("submit", (el) => {
 
   localStorage.setItem("projectDetails", JSON.stringify(data));
   // Add link here
-  window.location.href = "client.html";
+  window.location.href = "index.html";
 });
 
 function Data(n, c, v, v1, v2, t) {
