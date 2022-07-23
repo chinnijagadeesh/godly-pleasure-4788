@@ -146,7 +146,8 @@
           padding: 10px 20px;
         }
 
-        .cvv-number-field {
+        .cvv-number-field,
+        #cvv {
           width: 111px;
         }
 

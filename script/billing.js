@@ -23,7 +23,7 @@ span.addEventListener("click", () => {
    <div class="card-number">
        <div>  <label> Card Number </label><br>
            <input required
-             type="text"
+             type="number"
              class="card-number-field"
              placeholder="1234-2546-5852-1234"/></div>
    <div> <label>  Expiration Month </label><br>
@@ -71,7 +71,7 @@ span.addEventListener("click", () => {
    <div class="cvv-number ">     
    <label>CVV</label>
    <br>
-   <input required type="text" class="cvv-number-field" placeholder="xxx" />        
+   <input required type="password" id="cvv" placeholder="cvv" />        
  </div>
 
 </div>
@@ -89,29 +89,35 @@ span.addEventListener("click", () => {
   val.addEventListener("click", () => {
     document.getElementById("price").innerText = val.value;
   });
+  let cvv = document.querySelector("#cvv");
 
   document.querySelector("form").addEventListener("submit", (el) => {
     el.preventDefault();
-    let id;
-    let arr = [
-      "Payment confirmed",
-      "Please Wait fetching your data",
-      "Transaction is in process",
-      "Your transaction is Successful",
-    ];
-    let i = 0;
-    alert(arr[0]);
-    id = setInterval(function () {
-      if (i == arr.length - 1) {
-        clearInterval(id);
+    if (cvv.value == "123") {
+      let id;
+      let arr = [
+        "Please Wait fetching your data !",
+        "Payment Successful !",
+        "Transaction is in process !",
+        "Your transaction is Successful",
+        "Thank You !",
+      ];
+      let i = 0;
+      alert(arr[0]);
+      id = setInterval(function () {
+        if (i == arr.length - 1) {
+          clearInterval(id);
 
-        // Add Link Here to redirected to next page
-        window.location.href = "index.html";
-      } else {
-        i++;
-        alert(arr[i]);
-      }
-    }, 3000);
+          // Add Link Here to redirected to next page
+          window.location.href = "index.html";
+        } else {
+          i++;
+          alert(arr[i]);
+        }
+      }, 2000);
+    } else {
+      alert("Card detailes are wrong !");
+    }
   });
 });
 child.append(span);
