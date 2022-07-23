@@ -32,7 +32,7 @@ let desc = document.createElement("p");
 desc.setAttribute("class","para");
 desc.innerText = "4.5 stars with ";
 desc.append(span)
-down.append(star,desc);
+down.append(star,desc); 
 document.body.append(container,down);
 
 
